@@ -37,6 +37,11 @@ class AnimalsController < ApplicationController
     end
   end
 
+  def update
+    @animal = Animal.find(params[:id])
+    @animal.update!(animal_attributes)
+  end
+
   private
   def animal_params
     params.require(:animal).permit(:common_name, :latin_name, :kingdom)
