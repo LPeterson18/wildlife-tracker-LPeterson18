@@ -1,24 +1,32 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### To Start
+clone repo
 
-Things you may want to cover:
+$ rails db:create
 
-* Ruby version
+$ rails db:migrate
 
-* System dependencies
+$ rails db:seed
 
-* Configuration
+$ rails s
 
-* Database creation
+### Make API Calls
 
-* Database initialization
+GET localhost:3000/animals
 
-* How to run the test suite
+POST localhost:3000/animals
 
-* Services (job queues, cache servers, search engines, etc.)
+PATCH localhost:3000/animals/:id
 
-* Deployment instructions
+DELETE localhost:3000/animals/:id
 
-* ...
+GET localhost:3000/sightings
+
+POST localhost:3000/sightings
+
+PATCH localhost:3000/sightings/:id
+
+DELETE localhost:3000/sightings/:id
+
+GET localhost:3000/sightings?start_date=0000-00-00 00:00:00&end_date=2000-00-00 00:00:00
